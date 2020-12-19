@@ -25,7 +25,7 @@ const Sidebar = () => {
                   {links.map((link, index) => {
                     const { label, icon, url } = link;
                     return (
-                      <a href={url}>
+                      <a href={url} key={index}>
                         {icon}
                         {label}
                       </a>

@@ -12,8 +12,12 @@ const Navbar = () => {
     const btnBottom = btnCoordinates.bottom - 3; //becasue I want to lift submenu 3 pixels
     openSubmenu(page, { btnCenter, btnBottom });
   };
+
+  const handleHover = (e) => {
+    if (!e.target.classList.contains('link-btn')) closeSubmenu();
+  };
   return (
-    <nav className="nav">
+    <nav className="nav" onMouseOver={handleHover}>
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} alt="logo" className="nav-logo" />
